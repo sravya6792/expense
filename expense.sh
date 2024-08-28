@@ -38,7 +38,7 @@ systemctl enable mysqld
 validate $? "installing mysql server is enabled or not"
 systemctl start mysqld
 validate $? "installing mysql server is started or not"
-mysql -h 172.31.81.83 -u root -pExpenseApp@1 -e 'show databases;'
+mysql -h mysql.daws83s.shop -u root -pExpenseApp@1 -e 'show databases;'
 if [ $? -ne 0 ]
 then 
     echo "mysql root is not setup"
@@ -49,5 +49,11 @@ else
    echo "mysl is already setup"
 
 fi
+
+
+
+
+
+
 
 
